@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="difficultyPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="630.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+   <children>
+      <Label layoutX="169.0" layoutY="113.0" text="Choose difficulty" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="38.0" />
+         </font>
+      </Label>
+      <Hyperlink layoutX="255.0" layoutY="327.0" onAction="#onClickVeryHard" prefHeight="36.0" prefWidth="130.0" text="4.Very hard" textFill="#d02828">
+         <font>
+            <Font name="SansSerif Regular" size="22.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="253.0" layoutY="278.0" onAction="#onClickHard" text="3.Hard" textFill="#eeee2e">
+         <font>
+            <Font name="SansSerif Regular" size="22.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="253.0" layoutY="229.0" onAction="#onClickMedium" text="2.Medium" textFill="#4656d0">
+         <font>
+            <Font name="SansSerif Regular" size="22.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="253.0" layoutY="178.0" onAction="#onClickEasy" text="1.Easy" textFill="#18d61f">
+         <font>
+            <Font name="SansSerif Regular" size="22.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="43.0" layoutY="25.0" text="GUESS THE NUMBER GAME" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Regular" size="40.0" />
+         </font>
+      </Label>
+      <Pane fx:id="MainPane78" layoutX="-2.0" layoutY="-1.0" prefHeight="459.0" prefWidth="650.0" style="-fx-background-color: #ecfefa;" visible="false">
+         <children>
+            <Label layoutX="160.0" layoutY="39.0" text="Guess the number" textFill="#120eee">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="247.0" layoutY="111.0" text="Between 1 to " textFill="#ff00d9">
+               <font>
+                  <Font name="SansSerif Regular" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="target" layoutX="369.0" layoutY="111.0" text="10" textFill="#ff00d9">
+               <font>
+                  <Font name="SansSerif Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberField" layoutX="210.0" layoutY="233.0" promptText="Enter the number" style="-fx-padding: 8; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="228.0" layoutY="181.0" text="You have chances left :-" textFill="#ff00d9">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="chanceTarget" layoutX="391.0" layoutY="181.0" text="10" textFill="#ff00d9">
+               <font>
+                  <Font name="SansSerif Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="onClickCheck" layoutX="290.0" layoutY="284.0" mnemonicParsing="false" onAction="#onClickCheck" style="-fx-background-color: black; -fx-label-padding: 4; -fx-padding: 5; -fx-background-radius: 5; -fx-border-radius: 5;" text="Check" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="numInfo" layoutX="234.0" layoutY="350.0" text="You guess small number!!" textFill="#e11717" visible="false">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="MainPane1" layoutX="-4.0" layoutY="-4.0" prefHeight="472.0" prefWidth="662.0" style="-fx-background-color: #ecfefa;" visible="false">
+         <children>
+            <Label layoutX="134.0" layoutY="153.0" text="Guess the number" textFill="#120eee">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="40.0" />
+               </font>
+            </Label>
+            <Label fx:id="numInfo11" layoutX="194.0" layoutY="243.0" text="You guess the correct number!!" textFill="#06f231">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="230.0" layoutY="104.0" text="Congratulations!!!" textFill="#06f231">
+               <font>
+                  <Font name="SansSerif Regular" size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="500.0" fitWidth="650.0" layoutX="-5.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/77f17f786bb429e6dd493e9ab6a80292.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="234.0" layoutY="308.0" prefHeight="21.0" prefWidth="289.0" text="gueeses to guess the right number!!" textFill="#0400ff">
+               <font>
+                  <Font name="SansSerif Regular" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="noOfGuesses" layoutX="219.0" layoutY="308.0" prefHeight="21.0" prefWidth="5.0" text="5" textFill="#0400ff">
+               <font>
+                  <Font name="SansSerif Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="305.0" text="You took" textFill="#0400ff">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="225.0" text="You guess the correct number!!" textAlignment="CENTER" textFill="#2f00ff">
+               <font>
+                  <Font name="SansSerif Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="gameOverPane" layoutX="-5.0" layoutY="-6.0" prefHeight="488.0" prefWidth="662.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="680.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/3607831.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="195.0" layoutY="175.0" text="Your chances are over!!" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="227.0" text="The correct number was :" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="correctNo" layoutX="447.0" layoutY="227.0" prefHeight="26.0" prefWidth="30.0" text="15" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>
